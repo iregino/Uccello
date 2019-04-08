@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="471.01449275362324" y="101.78571428571428"/>
         </scene>
-        <!--Title-->
+        <!--Menu-->
         <scene sceneID="E0c-RI-eoA">
             <objects>
                 <tableViewController id="OWI-ov-Rvc" customClass="MenuTableViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" textLabel="bX4-YA-iy2" detailTextLabel="UpF-7I-se0" style="IBUITableViewCellStyleValue1" id="gWZ-9X-nkn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" textLabel="bX4-YA-iy2" detailTextLabel="UpF-7I-se0" imageView="YDw-xK-vHX" style="IBUITableViewCellStyleValue1" id="gWZ-9X-nkn">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWZ-9X-nkn" id="icC-17-Gpz">
@@ -68,7 +68,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bX4-YA-iy2">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="79" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -81,6 +81,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="placeholder" id="YDw-xK-vHX">
+                                            <rect key="frame" x="20" y="0.0" width="44" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -93,13 +97,13 @@
                             <outlet property="delegate" destination="OWI-ov-Rvc" id="gcd-po-v9R"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="BPo-45-RcC"/>
+                    <navigationItem key="navigationItem" title="Menu" largeTitleDisplayMode="never" id="BPo-45-RcC"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynb-bN-s7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1357" y="102"/>
         </scene>
-        <!--Title-->
+        <!--Menu Item-->
         <scene sceneID="xGY-kI-eyu">
             <objects>
                 <viewController id="mFh-6d-Sh7" customClass="MenuItemDetailViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
@@ -164,7 +168,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ASP-XA-GJf"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" largeTitleDisplayMode="never" id="w9g-YM-XVp"/>
+                    <navigationItem key="navigationItem" title="Menu Item" largeTitleDisplayMode="never" id="w9g-YM-XVp"/>
                     <connections>
                         <outlet property="addToOrderButton" destination="8sa-Th-riv" id="3fh-tq-YeF"/>
                         <outlet property="detailTextLabel" destination="ThU-lI-Ppv" id="9Sl-g5-nF3"/>
@@ -177,7 +181,7 @@
             </objects>
             <point key="canvasLocation" x="2221.739130434783" y="101.78571428571428"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Order-->
         <scene sceneID="56M-ri-HXk">
             <objects>
                 <tableViewController id="Cw0-QP-nHm" customClass="OrderTableViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" textLabel="vwf-KI-bhH" detailTextLabel="rRS-Od-w7D" style="IBUITableViewCellStyleValue1" id="2rK-KN-FOL">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrderCell" textLabel="vwf-KI-bhH" detailTextLabel="rRS-Od-w7D" imageView="3Om-UA-7jA" style="IBUITableViewCellStyleValue1" id="2rK-KN-FOL">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2rK-KN-FOL" id="Ivq-79-dDj">
@@ -194,7 +198,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vwf-KI-bhH">
-                                            <rect key="frame" x="20" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="79" y="12" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -207,6 +211,10 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="placeholder" id="3Om-UA-7jA">
+                                            <rect key="frame" x="20" y="0.0" width="44" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -216,7 +224,7 @@
                             <outlet property="delegate" destination="Cw0-QP-nHm" id="6iN-NG-Pf3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="rkK-Ym-GEo">
+                    <navigationItem key="navigationItem" title="Order" id="rkK-Ym-GEo">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="qMH-jJ-teK">
                             <connections>
                                 <action selector="submitTapped:" destination="Cw0-QP-nHm" id="SDF-jy-u5s"/>
