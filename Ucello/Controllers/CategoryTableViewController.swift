@@ -10,38 +10,58 @@ import UIKit
 
 class CategoryTableViewController: UITableViewController {
 
+    //Variables
+//    let menuController = MenuController()
+    var categories = [String]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        MenuController.shared.fetchCategories { (categories) in
+            if let categories = categories {
+                self.udpdateUI(with: categories)
+            } else {
+                print("No menu categories available.")
+            }
+        } //end closure
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
+    } //end viewDidLoad()
 
+    
+    func udpdateUI(with categories: [String]) {
+        DispatchQueue.main.async {
+            self.categories = categories
+            self.tableView.reloadData()
+        }
+    } //end updateUI()
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return categories.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath)
+        configure(cell, forItemAt: indexPath)
+        
         return cell
     }
-    */
-
+    
+    func configure(_ cell: UITableViewCell, forItemAt indexpath: IndexPath) {
+        
+        let categoryString = categories[indexpath.row]
+        cell.textLabel?.text = categoryString.capitalized
+    }
+                   
+                   
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -77,14 +97,18 @@ class CategoryTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // Preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        
+        if segue.identifier == "MenuSegue" {
+            let menuTableVC = segue.destination as! MenuTableViewController
+            let index = tableView.indexPathForSelectedRow!.row
+            print(categories[index])
+            menuTableVC.category = categories[index]
+        } //end if
+    } //end prepare(for segue:)
 
-}
+} //end CategoryTableViewController{}

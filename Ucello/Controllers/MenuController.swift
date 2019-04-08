@@ -9,6 +9,9 @@
 import Foundation
 
 class MenuController {
+    
+    //Variables
+    static let shared = MenuController()
     let baseURL = URL(string: "http://localhost:8090/")!
     
     // GET all menu categories from server
@@ -37,15 +40,22 @@ class MenuController {
         components.queryItems = [URLQueryItem(name: "category", value: categoryName)]
         let menuURL = components.url!
         
-        URLSession.shared.dataTask(with: menuURL) { (data, response, error) in
+        let task = URLSession.shared.dataTask(with: menuURL) { (data, response, error) in
             let jsonDecoder = JSONDecoder()
-            if let data = data,
-                let menuItems = try? jsonDecoder.decode(MenuItems.self, from: data) {
-                completion(menuItems.items)
+  
+            if let data = data {
+                if let menuItems = try? jsonDecoder.decode(MenuItems.self, from: data) {
+                    completion(menuItems.items)
+                } else {
+                    print("Data was not properly decoded.")
+                    completion(nil)
+                }
             } else {
+                print("Menu items are not available.")
                 completion(nil)
             }
-        }.resume()
+        }
+        task.resume()
         
     } //end fetchMenuItems()
     
@@ -76,4 +86,4 @@ class MenuController {
         
     } //end submitOrder()
     
-}
+} //end MenuController{}

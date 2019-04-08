@@ -9,7 +9,8 @@
 import Foundation
 
 struct MenuItem: Codable {
-    var id: String
+    
+    var id: Int
     var name: String
     var detailText: String
     var price: Double

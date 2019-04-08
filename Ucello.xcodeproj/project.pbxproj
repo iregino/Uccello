@@ -81,8 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				F9A61089225AB11B009B26E9 /* CategoryTableViewController.swift */,
-				F9A6108F225AB21B009B26E9 /* MenuItemDetailViewController.swift */,
 				F9A6108B225AB131009B26E9 /* MenuTableViewController.swift */,
+				F9A6108F225AB21B009B26E9 /* MenuItemDetailViewController.swift */,
 				F9A6108D225AB13A009B26E9 /* OrderTableViewController.swift */,
 				F9A6109A225AB563009B26E9 /* MenuController.swift */,
 			);
