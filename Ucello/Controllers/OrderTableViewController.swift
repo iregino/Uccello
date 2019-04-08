@@ -11,6 +11,7 @@ import UIKit
 class OrderTableViewController: UITableViewController {
     
     var order = Order()
+    var orderMinutes = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,34 +52,59 @@ class OrderTableViewController: UITableViewController {
     
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
         if editingStyle == .delete {
             MenuController.shared.order.menuItems.remove(at: indexPath.row)
         }   
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
+    @IBAction func submitTapped(_ sender: Any) {
+        
+        let orderTotal = MenuController.shared.order.menuItems.reduce(0.0) { (result, menuItem) -> Double in
+            return result + menuItem.price
+        }
+        
+        let formattedOrder = String(format: "$%.2f", orderTotal)
+        
+        let alert = UIAlertController(title: "Confirm Order", message: "You are about to submit your order with a total of \(formattedOrder)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Submit", style: .default) { action in
+            self.uploadOrder()
+        })
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+        
+        
+    } //end submitTapped()
+    
+    func uploadOrder() {
+        let menuIds = MenuController.shared.order.menuItems.map { $0.id }
+        MenuController.shared.submitOrder(forMenuIDs: menuIds) { (minutes) in
+            DispatchQueue.main.async {
+                if let minutes = minutes {
+                    self.orderMinutes = minutes
+                    self.performSegue(withIdentifier: "ConfirmationSegue", sender: nil)
+                } //end if-let
+            }
+        } //end closure
+    } //end uploadOrder()
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func unwindToOrderList(segue: UIStoryboardSegue) {
+        
+        if segue.identifier == "DismissConfirmation" {
+            MenuController.shared.order.menuItems.removeAll()
+        }
     }
-    */
-
-}
+    
+    // Preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ConfirmationSegue" {
+            let orderConfirmationVC = segue.destination as! OrderConfirmationViewController
+            orderConfirmationVC.minutes = orderMinutes
+        } //end if
+        
+    } //end prepare(for segue:)
+ 
+} //end OrderTableViewController{}

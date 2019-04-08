@@ -19,6 +19,7 @@
 		F9A61097225AB411009B26E9 /* IntermediaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A61096225AB411009B26E9 /* IntermediaryModels.swift */; };
 		F9A61099225AB49B009B26E9 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A61098225AB49B009B26E9 /* Order.swift */; };
 		F9A6109B225AB563009B26E9 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6109A225AB563009B26E9 /* MenuController.swift */; };
+		F9A6109D225AE1A0009B26E9 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6109C225AE1A0009B26E9 /* OrderConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F9A61096225AB411009B26E9 /* IntermediaryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediaryModels.swift; sourceTree = "<group>"; };
 		F9A61098225AB49B009B26E9 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		F9A6109A225AB563009B26E9 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		F9A6109C225AE1A0009B26E9 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				F9A6108B225AB131009B26E9 /* MenuTableViewController.swift */,
 				F9A6108F225AB21B009B26E9 /* MenuItemDetailViewController.swift */,
 				F9A6108D225AB13A009B26E9 /* OrderTableViewController.swift */,
+				F9A6109C225AE1A0009B26E9 /* OrderConfirmationViewController.swift */,
 				F9A6109A225AB563009B26E9 /* MenuController.swift */,
 			);
 			path = Controllers;
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9A6109D225AE1A0009B26E9 /* OrderConfirmationViewController.swift in Sources */,
 				F9A61090225AB21C009B26E9 /* MenuItemDetailViewController.swift in Sources */,
 				F9A6109B225AB563009B26E9 /* MenuController.swift in Sources */,
 				F9A6108C225AB131009B26E9 /* MenuTableViewController.swift in Sources */,
