@@ -16,8 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var orderTabBarItem: UITabBarItem!
     
     @objc func updateOrderBadge() {
-        orderTabBarItem.badgeValue = String(MenuController.shared.order.menuItems.count)
-    }
+        switch MenuController.shared.order.menuItems.count {
+        case 0:
+            orderTabBarItem.badgeValue = nil
+        case let count:
+            orderTabBarItem.badgeValue = String(count)
+        } //end switch
+    } //end updateOrderBadge()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
