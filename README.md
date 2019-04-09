@@ -2,7 +2,7 @@
 
 ### Description
 
-This is an app for a restaurant take out order system. It allows users to browse the menu and order items. Upon submitting the order, the app informs the users when the order will be ready.
+This is an app for customers to order take out from a restaurant. It allows users to browse the menu and order items that they like. Upon submitting the order, it informs the users when the order will be ready.
 
 ![uccello](https://user-images.githubusercontent.com/44620966/55836765-194d0780-5ae5-11e9-8310-2cbbbf097e6d.png)
 ![menu](https://user-images.githubusercontent.com/44620966/55836776-1f42e880-5ae5-11e9-8f2a-b8a2866d503a.png)
