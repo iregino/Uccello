@@ -8,6 +8,10 @@ This is an app for customers to order take out from a restaurant. It allows user
 ![menu](https://user-images.githubusercontent.com/44620966/55836776-1f42e880-5ae5-11e9-8f2a-b8a2866d503a.png)
 ![pizza](https://user-images.githubusercontent.com/44620966/55836785-2669f680-5ae5-11e9-8ffa-d19f5319a155.png)
 
+### Instruction
+
+After cloning this repo, run the Open Restaurant.App server locally. Then, run the Uccello.xcodeproj on the simulator.
+
 ### Technology
 
 Swift 5.0, Xcode 10, UIKit, Interface Builder
