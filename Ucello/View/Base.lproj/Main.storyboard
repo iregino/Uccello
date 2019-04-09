@@ -139,8 +139,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sa-Th-riv">
-                                <rect key="frame" x="20" y="775" width="374" height="30"/>
-                                <color key="backgroundColor" red="0.086274509799999996" green="0.36078431370000003" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="20" y="768" width="374" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.41176470588235292" blue="0.082352941176470587" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <state key="normal" title="Add to Order">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -157,7 +158,7 @@
                             <constraint firstItem="ASP-XA-GJf" firstAttribute="trailing" secondItem="8sa-Th-riv" secondAttribute="trailing" constant="20" id="OYe-DK-tAf"/>
                             <constraint firstItem="ThU-lI-Ppv" firstAttribute="leading" secondItem="ASP-XA-GJf" secondAttribute="leading" constant="20" id="Ofm-Qd-Z0z"/>
                             <constraint firstItem="ThU-lI-Ppv" firstAttribute="top" secondItem="5Rv-Iz-lTv" secondAttribute="bottom" constant="8" id="OoU-Uf-4V0"/>
-                            <constraint firstItem="ASP-XA-GJf" firstAttribute="bottom" secondItem="8sa-Th-riv" secondAttribute="bottom" constant="8" id="XRX-uC-8yp"/>
+                            <constraint firstItem="ASP-XA-GJf" firstAttribute="bottom" secondItem="8sa-Th-riv" secondAttribute="bottom" constant="15" id="XRX-uC-8yp"/>
                             <constraint firstItem="ASP-XA-GJf" firstAttribute="trailing" secondItem="VC0-xr-oV6" secondAttribute="trailing" constant="20" id="b2R-0r-3JX"/>
                             <constraint firstItem="sLi-67-2gx" firstAttribute="top" secondItem="ASP-XA-GJf" secondAttribute="top" constant="8" id="iFK-Ot-1P8"/>
                             <constraint firstItem="VC0-xr-oV6" firstAttribute="top" secondItem="sLi-67-2gx" secondAttribute="bottom" constant="8" id="oH5-YS-Pzu"/>
@@ -226,6 +227,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Order" id="rkK-Ym-GEo">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="qMH-jJ-teK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="submitTapped:" destination="Cw0-QP-nHm" id="SDF-jy-u5s"/>
                             </connections>
@@ -247,15 +249,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-uN-JFy">
-                                <rect key="frame" x="20" y="438" width="374" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="confirm2" translatesAutoresizingMaskIntoConstraints="NO" id="PLy-Qe-ZhI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you!" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPC-uN-JFy">
+                                <rect key="frame" x="20" y="428" width="374" height="40.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-f6-AMd">
-                                <rect key="frame" x="180" y="466.5" width="54" height="30"/>
-                                <state key="normal" title="Dismiss"/>
+                                <rect key="frame" x="154.5" y="476.5" width="105" height="47"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleColor" red="1" green="0.2747408865" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="nyT-HG-VLG" kind="unwind" identifier="DismissConfirmation" unwindAction="unwindToOrderListWithSegue:" id="upP-Ls-PTa"/>
                                 </connections>
@@ -272,6 +283,7 @@
                         <viewLayoutGuide key="safeArea" id="nBY-px-4eS"/>
                     </view>
                     <connections>
+                        <outlet property="imageview" destination="PLy-Qe-ZhI" id="W5Y-u1-xHZ"/>
                         <outlet property="timeRemainingLabel" destination="EPC-uN-JFy" id="ts9-yT-w7n"/>
                     </connections>
                 </viewController>
@@ -280,14 +292,21 @@
             </objects>
             <point key="canvasLocation" x="2221.739130434783" y="795.53571428571422"/>
         </scene>
-        <!--Your Order-->
+        <!--YOUR ORDER-->
         <scene sceneID="u4p-n4-cSb">
             <objects>
                 <navigationController id="Zoc-ye-quo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Order" id="70p-E4-f33"/>
+                    <tabBarItem key="tabBarItem" title="YOUR ORDER" image="order" selectedImage="order" id="70p-E4-f33"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kW3-G0-sWt">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.41176470588235292" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="Cw0-QP-nHm" kind="relationship" relationship="rootViewController" id="30p-zF-TvY"/>
@@ -297,14 +316,21 @@
             </objects>
             <point key="canvasLocation" x="-410.14492753623193" y="795.53571428571422"/>
         </scene>
-        <!--Menu-->
+        <!--MENU-->
         <scene sceneID="b61-G1-jhg">
             <objects>
                 <navigationController id="FFH-76-kT5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Menu" id="R40-li-ekG"/>
+                    <tabBarItem key="tabBarItem" title="MENU" image="bookmark" selectedImage="bookmark" id="R40-li-ekG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6CH-FC-4Zd">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.41176470588235292" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="nbc-6l-VHM" kind="relationship" relationship="rootViewController" id="W5Z-eS-Q7E"/>
@@ -320,8 +346,10 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ltW-fS-wSp" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nZV-C2-kl9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="1" green="0.41176470590000003" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="FFH-76-kT5" kind="relationship" relationship="viewControllers" id="s2P-J5-hNg"/>
@@ -334,6 +362,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bookmark" width="30" height="30"/>
+        <image name="confirm2" width="701" height="1467"/>
+        <image name="order" width="30" height="30"/>
         <image name="placeholder" width="100" height="100"/>
     </resources>
 </document>

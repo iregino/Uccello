@@ -66,7 +66,6 @@ class CategoryTableViewController: UITableViewController {
         if segue.identifier == "MenuSegue" {
             let menuTableVC = segue.destination as! MenuTableViewController
             let index = tableView.indexPathForSelectedRow!.row
-            print(categories[index])
             menuTableVC.category = categories[index]
         } //end if
     } //end prepare(for segue:)
