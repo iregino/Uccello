@@ -49,7 +49,7 @@ class OrderTableViewController: UITableViewController {
                 if let currentIndexPath = self.tableView.indexPath(for: cell), currentIndexPath != indexPath {
                     return
                 }
-                let cellImg : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+                let cellImg : UIImageView = UIImageView(frame: CGRect(x: 5, y: 5, width: 80, height: 80))
                 cellImg.image = image
                 cell.imageView?.addSubview(cellImg)
                 cell.setNeedsLayout()
@@ -59,7 +59,7 @@ class OrderTableViewController: UITableViewController {
     } //end configure()
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 90
     }
     
     // Override to support conditional editing of the table view.

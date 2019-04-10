@@ -13,7 +13,7 @@
         <!--Trattoria Uccello-->
         <scene sceneID="Hjn-ia-kbm">
             <objects>
-                <tableViewController id="nbc-6l-VHM" customClass="CategoryTableViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="nbc-6l-VHM" customClass="CategoryTableViewController" customModule="Uccello" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xUf-rO-qlY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,13 +54,13 @@
         <!--Menu-->
         <scene sceneID="E0c-RI-eoA">
             <objects>
-                <tableViewController id="OWI-ov-Rvc" customClass="MenuTableViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="OWI-ov-Rvc" customClass="MenuTableViewController" customModule="Uccello" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NVO-OL-GVt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" textLabel="bX4-YA-iy2" detailTextLabel="UpF-7I-se0" imageView="YDw-xK-vHX" style="IBUITableViewCellStyleValue1" id="gWZ-9X-nkn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuCell" textLabel="bX4-YA-iy2" detailTextLabel="UpF-7I-se0" imageView="d9D-3v-STC" style="IBUITableViewCellStyleValue1" id="gWZ-9X-nkn">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gWZ-9X-nkn" id="icC-17-Gpz">
@@ -81,7 +81,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" image="placeholder" id="YDw-xK-vHX">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="placeholder" id="d9D-3v-STC">
                                             <rect key="frame" x="20" y="0.0" width="44" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
@@ -106,7 +106,7 @@
         <!--Menu Item-->
         <scene sceneID="xGY-kI-eyu">
             <objects>
-                <viewController id="mFh-6d-Sh7" customClass="MenuItemDetailViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mFh-6d-Sh7" customClass="MenuItemDetailViewController" customModule="Uccello" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qj5-Va-qjS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,7 +185,7 @@
         <!--Order-->
         <scene sceneID="56M-ri-HXk">
             <objects>
-                <tableViewController id="Cw0-QP-nHm" customClass="OrderTableViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Cw0-QP-nHm" customClass="OrderTableViewController" customModule="Uccello" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="v4W-0V-0QC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +244,7 @@
         <!--Order Confirmation View Controller-->
         <scene sceneID="Yuo-oD-fNK">
             <objects>
-                <viewController id="t1b-q0-AJH" customClass="OrderConfirmationViewController" customModule="Ucello" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="t1b-q0-AJH" customClass="OrderConfirmationViewController" customModule="Uccello" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sdc-Jj-mtQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
